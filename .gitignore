@@ -1,12 +1,12 @@
 # Ignore all image files
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
-*.tiff
-*.svg
-*.ico
+# *.png
+# *.jpg
+# *.jpeg
+# *.gif
+# *.bmp
+# *.tiff
+# *.svg
+# *.ico
 *.rar
 *.psd
 
