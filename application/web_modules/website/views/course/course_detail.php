@@ -132,7 +132,8 @@
                             <div class="list-group fs-14 font-noto">
                                 <a href="#" target="_blank" class="list-group-item list-group-item-action">
                                     <div class="d-flex">
-                                        <div class="p-1 align-self-start"><img src="http://localhost/theme/canvas/Canvas%207%20Files/images/blocks/preview/team/2.jpg" width="60" class="rounded mx-auto d-block" alt="..."></div>
+                                        <div class="p-1 align-self-start">
+                                            <img src="https://images.unsplash.com/photo-1668554245893-2430d0077217?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded mx-auto d-block custom-img img-fluid" alt="..."></div>
                                         <div class="p-1 align-self-end align-self-center">
                                             <div class="fw-bold">ผศ.ดร.โชคฑีรภัคญ์ ธนเศรษฐวัฒนา</div>
                                             <div>คณบดี</div>
@@ -142,7 +143,7 @@
                                 </a>
                                 <a href="#" target="_blank" class="list-group-item list-group-item-action">
                                     <div class="d-flex">
-                                        <div class="p-1 align-self-start"><img src="http://localhost/theme/canvas/Canvas%207%20Files/images/blocks/preview/team/2.jpg" width="60" class="rounded mx-auto d-block" alt="..."></div>
+                                        <div class="p-1 align-self-start"><img src="https://images.unsplash.com/photo-1717533564570-4ea91a5df160?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="rounded mx-auto d-block custom-img img-fluid" alt="..."></div>
                                         <div class="p-1 align-self-end align-self-center">
                                             <div class="fw-bold">ผศ.ดร.ปณิธาน  จันทร์ทิพย์</div>
                                             <div>คณบดี</div>
@@ -365,3 +366,11 @@
 </section>
 
 <?php echo $this->load->view('website/course/register_list'); ?>
+
+<style>
+    .custom-img {
+      width: 60px;  /* กำหนดความกว้างที่ต้องการ */
+      height: 60px; /* กำหนดความสูงที่ต้องการ */
+      object-fit: cover; /* ปรับขนาดรูปภาพให้พอดี */
+    }
+</style>
