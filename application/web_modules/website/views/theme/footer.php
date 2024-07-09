@@ -110,7 +110,7 @@
 				<div class="container">
 
 					<div class="row justify-content-between align-items-center">
-						<div class="col-md-6"><?php echo $this->lang->line('footer_copyright');?></div>
+						<div class="col-md-6 font-noto"><?php echo $this->lang->line('footer_copyright');?></div>
 
 						<div class="col-md-6 d-md-flex flex-md-column align-items-md-end mt-4 mt-md-0">
 							<div class="copyrights-menu copyright-links font-noto">

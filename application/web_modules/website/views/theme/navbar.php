@@ -92,6 +92,12 @@
 										<div class="font-noto fs-16"><i class="fa-solid fa-book"></i> <?php echo $this->lang->line('nav_services_manual'); ?></div>
 									</a>
 								</li>
+								<?php $current = (($page == "SERVICE" && $sub_page == "SITEMAP"))? "current":"";?>
+								<li class="<?php echo $current;?> menu-item">
+									<a class="menu-link" href="<?php echo site_url('sitemap');?>">
+										<div class="font-noto fs-16"><i class="fa-solid fa-sitemap"></i> <?php echo $this->lang->line('nav_sitemap'); ?></div>
+									</a>
+								</li>
 							</ul>
 						</li>
 

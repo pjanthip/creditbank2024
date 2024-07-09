@@ -14,7 +14,7 @@
                                 <li class="list-group-item border-0">
                                     <div class="d-flex">
                                         <div class="p-1 align-self-start align-self-center col-md-2">
-                                            <i class="box-square-sm d-flex align-items-center justify-content-center fa-regular fa-bookmark fs-3 color position-relative"></i>
+                                            <i class="box-square-sm d-flex align-items-center justify-content-center fas fa-book fs-3 color position-relative"></i>
                                         </div>
                                         <div class="p-1 align-self-end align-self-center col-md-10 fs-14 font-noto">
                                             <div class="fw-bold">ชื่อหลักสูตร</div>
@@ -23,6 +23,17 @@
                                     </div>
                                 </li>
                                 <li class="list-group-item border-0">
+                                    <div class="d-flex">
+                                        <div class="p-1 align-self-start align-self-center col-md-2">
+                                            <i class="box-square-sm d-flex align-items-center justify-content-center fa-solid fa-bookmark fs-3 color position-relative"></i>
+                                        </div>
+                                        <div class="p-1 align-self-end align-self-center col-md-10 fs-14 font-noto">
+                                            <div class="fw-bold">ประเภทหลักสูตร</div>
+                                            <a href="#" class="text-black h-text-color">สะสมหน่วยกิต</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <!-- <li class="list-group-item border-0">
                                     <div class="d-flex">
                                         <div class="p-1 align-self-start align-self-center col-md-2">
                                             <i class="box-square-sm d-flex align-items-center justify-content-center fa-solid fa-users-viewfinder fs-3 color position-relative"></i>
@@ -57,7 +68,7 @@
                                             <a href="#" class="text-black h-text-color">Hybrid Learning</a>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="list-group-item border-0">
                                     <div class="d-flex">
                                         <div class="p-1 align-self-start align-self-center col-md-2">
@@ -70,7 +81,7 @@
                                     </div>
                                 </li>
                                 <li class="list-group-item border-0">
-                                    <button type="button" class="btn btn-danger font-noto btn-lg w-100">ลงทะเบียน</button>
+                                    <button type="button" class="btn btn-danger font-noto btn-lg w-100" data-bs-toggle="modal" data-bs-target="#TableListRegister" data-bs-whatever="<?php echo $title;?>"><i class="fa fa-sign-in-alt"></i> ลงทะเบียน</button>
                                 </li>
                             </ul>
 
@@ -176,7 +187,7 @@
                             <a href="#"><img src="https://plus.unsplash.com/premium_photo-1716666258784-7f9a5b37c4aa?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Event Single" class="rounded-4"></a>
                         </div>
 
-                        <h3 class="mb-3 font-noto">สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน</h3>
+                        <h3 class="mb-3 font-noto"><?php echo $title;?></h3>
                        
                         <div class="course-detail font-noto">
                             <p class="my-2 ps-6">หลักสูตรคลังหน่วยกิต “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” เป็นหลักสูตรที่เป็นไปตามข้อบังคับมหาวิทยาลัย</p>
@@ -318,7 +329,7 @@
             </div>
         </div>
 
-        <div class="bg-white w-100 py-4 shadow-sm position-sticky bottom-0 mt-6">
+        <div class="bg-white w-100 py-4 shadow-sm position-sticky bottom-0 mt-6 border-top border-dark-subtle border-opacity-50">
 
             <div class="row align-items-center justify-content-between mx-0 px-2">
                 <div class="col-auto">
@@ -337,7 +348,7 @@
                                 <strong>ฟรี</strong>
                             </div>
                             <div class="col-auto">
-                                <a href="#" class="btn btn-danger rounded-4 btn-lg fw-normal text-center m-0 px-4 font-noto">ลงทะเบียน</a>
+                                <button type="button" class="btn btn-danger rounded-4 btn-lg fw-normal text-center m-0 px-4 font-noto" data-bs-toggle="modal" data-bs-target="#TableListRegister" data-bs-whatever="<?php echo $title;?>"><i class="fa fa-sign-in-alt"></i> ลงทะเบียน</button>
                             </div>
                         </div>
                     </div>
@@ -352,3 +363,5 @@
         </div>
     </div>
 </section>
+
+<?php echo $this->load->view('website/course/register_list'); ?>

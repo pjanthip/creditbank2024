@@ -128,5 +128,8 @@ $route['blog/article_2'] = 'website/blog/article_2';
 $route['course'] = 'website/course';
 $route['course/detail/(:any)'] = 'website/course/detail/$1';
 
+
+$route['sitemap'] = 'website/sitemap';
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
