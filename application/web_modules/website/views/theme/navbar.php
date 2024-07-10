@@ -88,7 +88,7 @@
 								</li>
 								<?php $current = (($page == "SERVICE" && $sub_page == "MANUAL") || ($page == "SERVICE" && $sub_page == "MANUAL_DETAIL"))? "current":"";?>
 								<li class="<?php echo $current;?> menu-item">
-									<a class="menu-link" href="#">
+									<a class="menu-link" href="<?php echo site_url('docs');?>">
 										<div class="font-noto fs-16"><i class="fa-solid fa-book"></i> <?php echo $this->lang->line('nav_services_manual'); ?></div>
 									</a>
 								</li>
