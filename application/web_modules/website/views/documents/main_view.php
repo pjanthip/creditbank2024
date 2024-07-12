@@ -16,7 +16,7 @@
                         <div class="card-footer">
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="font-noto fs-12 ">เปิดอ่าน <?php echo number_format(13567);?> ครั้ง</div>
-                                <div class="text-center"><a href="#" class="btn btn-success font-noto px-5">อ่าน</a></div>
+                                <div class="text-center"><a href="<?php echo site_url("docs/detail/การสมัครสมาชิก")?>" class="btn btn-success font-noto px-5">อ่าน</a></div>
                             </div>
                         </div>
                     </div>

@@ -130,7 +130,8 @@ $route['course/detail/(:any)'] = 'website/course/detail/$1';
 
 
 $route['sitemap'] = 'website/sitemap';
-$route['docs'] = 'website/Documents';
+$route['docs'] = 'website/documents';
+$route['docs/detail/(:any)'] = 'website/documents/detail/$1';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

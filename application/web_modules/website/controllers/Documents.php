@@ -42,5 +42,28 @@ class Documents extends CI_Controller
         $reponse['author']=($q->num_rows() > 0)? $q->row()->websetting_value:"";
         return $reponse;
     }
+    public function detail($url = null){
+        $reponse = $this->main_variable();
+
+        //$reponse = $this->get_filter();
+        $encoded_url = $url;
+        $decoded_url = urldecode($encoded_url);
+
+        $reponse['page']='SERVICE';
+        $reponse['sub_page']='MANUAL';
+        $reponse['title'] = $decoded_url;
+        $reponse['breadcrumb'] = [
+            $this->lang->line('nav_services_manual') => ["url" => site_url('docs'), "active" => false],
+            $decoded_url => ["url" => "", "active" => true],
+        ];
+
+        $sql = "SELECT * FROM tb_faculty WHERE showStatus = 1";
+        $reponse['list_faculty'] = $this->db->query($sql)->result();
+        
+        $this->load->view('website/theme/header',$reponse);
+        $this->load->view('website/theme/navbar', $reponse);
+        $this->load->view('website/documents/documents_detail',$reponse);
+        $this->load->view('website/theme/footer.php',$reponse);
+    }
 
 }// END CLASS
