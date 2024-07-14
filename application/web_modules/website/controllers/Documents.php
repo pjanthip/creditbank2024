@@ -51,7 +51,7 @@ class Documents extends CI_Controller
 
         $reponse['page']='SERVICE';
         $reponse['sub_page']='MANUAL';
-        $reponse['title'] = $decoded_url;
+        $reponse['title'] = $this->lang->line('nav_services_manual');
         $reponse['breadcrumb'] = [
             $this->lang->line('nav_services_manual') => ["url" => site_url('docs'), "active" => false],
             $decoded_url => ["url" => "", "active" => true],
@@ -59,6 +59,8 @@ class Documents extends CI_Controller
 
         $sql = "SELECT * FROM tb_faculty WHERE showStatus = 1";
         $reponse['list_faculty'] = $this->db->query($sql)->result();
+
+        $reponse['title_doc'] = $decoded_url;
         
         $this->load->view('website/theme/header',$reponse);
         $this->load->view('website/theme/navbar', $reponse);

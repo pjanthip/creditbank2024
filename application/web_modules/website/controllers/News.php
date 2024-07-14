@@ -1,71 +1,70 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-
 class News extends CI_Controller
 {
-
+    public function __construct()
+	{
+		parent::__construct();
+   		check_lang(); 
+	}
     
     public function index()
     {
-    //    echo "Index Home";
-
-       $this->main_view();
-    }
-
-    public function main_variable(){
-        define("CANVAS",base_url()."assets/theme/canvas/");
-        define("ABLE",base_url()."assets/theme/able/dist/");
-
-        $reponse['title']='ข่าวประชาสัมพันธ์ | CRRU - Credit Bank';
-        $reponse['keywords']='Credit Bank, CreditBank, Credit, Credit Bank CRRU, CRRU, คลังหน่วยกิต, สะสมหน่วยกิต, การศึกษาต่อเนื่อง, ชุดฝึกอบรม, Modular, Training, เก็บเกรด, มหาวิทยาลัย, ราชภัฏเชียงราย, เชียงราย, เทียบโอน, เทียบโอนหน่วยกิต, หน่วยกิต, Pre University, เรียนเก็บเกรดก่อน, คลังหน่วยกิตภาคเหนือ';
-        $reponse['description']='งานคลังหน่วยกิต มหาวิทยาลัยราชภัฏเชียงราย ดำเนินการโดย สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาลัยราชภัฏเชียงราย (CLLI)';
-        $reponse['author']='สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาลัยราชภัฏเชียงราย';
-        $reponse['page']='NEWS';
-        $reponse['title_page']='ข่าวประชาสัมพันธ์';
-        $reponse['title_page_detail']='News';
-        $reponse['ACTIVE']='NEWS';
-        $reponse['breadcrumb']=array(
-                                        'ข่าวประชาสัมพันธ์' => array(site_url('news'),'active'),
-                                    );
-        return $reponse;
-        
-      }
-
-    public function main_view() 
-    {
         $reponse = $this->main_variable();
+
+        //$reponse = $this->get_filter();
+
+        $reponse['page']='SERVICE';
+        $reponse['sub_page']='NEWS';
+        $reponse['title'] = $this->lang->line('nav_services_news');
+        $reponse['breadcrumb'] = [
+            $this->lang->line('nav_services_news') => ["url" => site_url('news'), "active" => true]
+        ];
+
+        $sql = "SELECT * FROM tb_faculty WHERE showStatus = 1";
+        $reponse['list_faculty'] = $this->db->query($sql)->result();
+        
         $this->load->view('website/theme/header',$reponse);
         $this->load->view('website/theme/navbar', $reponse);
         $this->load->view('website/news/news_view',$reponse);
         $this->load->view('website/theme/footer.php',$reponse);
     }
 
-    public function detail($id) 
-    {
+    public function main_variable(){
+        //$sql = "SELECT * FROM tb_websetting WHERE websetting_code = '".$this->lang->line('lang')."_title' AND websetting_status = 1"; $q = $this->db->query($sql);
+        $sql = "SELECT * FROM tb_websetting WHERE websetting_code = '".$this->lang->line('lang')."_title_connect' AND websetting_status = 1"; $q = $this->db->query($sql);
+        $reponse['title_connect'] = ($q->num_rows() > 0)? $q->row()->websetting_value:"";
+        $sql = "SELECT * FROM tb_websetting WHERE websetting_code = '".$this->lang->line('lang')."_keywords' AND websetting_status = 1"; $q = $this->db->query($sql);
+        $reponse['keywords']=($q->num_rows() > 0)? $q->row()->websetting_value:"";
+        $sql = "SELECT * FROM tb_websetting WHERE websetting_code = '".$this->lang->line('lang')."_description' AND websetting_status = 1"; $q = $this->db->query($sql);
+        $reponse['description']=($q->num_rows() > 0)? $q->row()->websetting_value:"";
+        $sql = "SELECT * FROM tb_websetting WHERE websetting_code = '".$this->lang->line('lang')."_author' AND websetting_status = 1"; $q = $this->db->query($sql);
+        $reponse['author']=($q->num_rows() > 0)? $q->row()->websetting_value:"";
+        return $reponse;
+    }
+    public function detail($url = null){
         $reponse = $this->main_variable();
-        $reponse['id'] = $id;
-        if($reponse['id']=='N0001'){  
-            $reponse['topic_news']='รับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 3';
-            $reponse['date_news']='4 ก.พ. 65';
-            $reponse['by_news']='สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาลัยราชภัฏเชียงราย';
-        }elseif($reponse['id']=='N0002'){
-            $reponse['topic_news']='รับสมัครผู้เข้าร่วมอบรม หลักสูตร“สร้างสมาธิพิชิตอารมณ์ด้วยจิตวิทยาการสื่อสาร”';
-            $reponse['date_news']='3 ก.พ. 65';
-            $reponse['by_news']='สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาลัยราชภัฏเชียงราย';
-        }elseif($reponse['id']=='N0003'){
-            $reponse['topic_news']='รับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 4';
-            $reponse['date_news']='31 ม.ค. 66';
-            $reponse['by_news']='สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาลัยราชภัฏเชียงราย';
-        }elseif($reponse['id']=='N0004'){
-            $reponse['topic_news']='รับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 5 (รอบพิเศษ)';
-            $reponse['date_news']='1 ก.ย. 66';
-            $reponse['by_news']='สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาลัยราชภัฏเชียงราย';
-        }else{
-            redirect('news');
-        }
+
+        //$reponse = $this->get_filter();
+        $encoded_url = $url;
+        $decoded_url = urldecode($encoded_url);
+
+        $reponse['page']='SERVICE';
+        $reponse['sub_page']='MANUAL';
+        $reponse['title'] = $this->lang->line('nav_services_manual');
+        $reponse['breadcrumb'] = [
+            $this->lang->line('nav_services_manual') => ["url" => site_url('docs'), "active" => false],
+            $decoded_url => ["url" => "", "active" => true],
+        ];
+
+        $sql = "SELECT * FROM tb_faculty WHERE showStatus = 1";
+        $reponse['list_faculty'] = $this->db->query($sql)->result();
+
+        $reponse['title_doc'] = $decoded_url;
+        
         $this->load->view('website/theme/header',$reponse);
         $this->load->view('website/theme/navbar', $reponse);
-        $this->load->view('website/news/news_detail',$reponse);
+        $this->load->view('website/documents/documents_detail',$reponse);
         $this->load->view('website/theme/footer.php',$reponse);
     }
 

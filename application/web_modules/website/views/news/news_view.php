@@ -1,127 +1,40 @@
-<section id="page-title" class="page-title-pattern">
-    <div class="container clearfix">
-        <h1><?php echo $title_page;?></h1>
-        <span><?php echo $title_page_detail;?></span>
-        <?php $this->load->view('website/theme/breadcrumb');?>
-    </div>
-</section>
-<section id="content">
-    <div class="content-wrap" style="padding-top:40px;">
-        <div class="container clearfix">
-            <!-- Posts ============================================= -->
-			<div id="posts" class="row grid-container gutter-40 post_news">
-                <div class="entry col-12">
-                    <div class="grid-inner row g-0">
-                        <div class="col-md-4">
-                            <div class="entry-image">
-                                <a href="<?php echo base_url('assets/images/news/N0004.png'); ?>" data-lightbox="image"><img src="<?php echo base_url('assets/images/news/N0004.png'); ?>" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-md-8 ps-md-4">
-                            <div class="entry-title title-sm">
-                                <h2><a href="<?php echo site_url('news/detail/N0004');?>">รับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 5 (รอบพิเศษ)</a></h2>
-                            </div>
-                            <div class="entry-meta">
-                                <ul>
-                                    <li><i class="icon-calendar3"></i> 1 ก.ย. 66</li>
-                                    <li><a href="#"><i class="icon-user"></i> สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาราชภัฏเชียงราย</a></li>
-                                </ul>
-                            </div>
-                            <div class="entry-content">
-                                <p>📣📣เปิดรับสมัครผู้เรียน “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 5 (รอบพิเศษ) สำหรับบุคลากรหรือเจ้าหน้าที่ ทำงานในหน่วยงานด้านสุขภาพ ที่ไม่ได้สำเร็จการศึกษาระดับอนุปริญญาหรือสูงกว่าทางด้านสาธารณสุขศาสตร์ หรือวิทยาศาสตร์สุขภาพ 🎯จำกัดแค่ 25 คนเท่านั้น!! ตั้งแต่วันที่ 1 ก.ย. – 5 ต.ค. 66 (หรือจนกว่าจำนวนจะเต็ม) สามารถสมัครได้ที่ <a href="https://creditbank.crru.ac.th/">https://creditbank.crru.ac.th/</a>  </p>
-                                <a href="<?php echo site_url('news/detail/N0004');?>" class="btn btn-warning text-dark">รายละเอียด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="entry col-12">
-                    <div class="grid-inner row g-0">
-                        <div class="col-md-4">
-                            <div class="entry-image">
-                                <a href="<?php echo base_url('assets/images/news/N0003.png'); ?>" data-lightbox="image"><img src="<?php echo base_url('assets/images/news/N0003.png'); ?>" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-md-8 ps-md-4">
-                            <div class="entry-title title-sm">
-                                <h2><a href="<?php echo site_url('news/detail/N0003');?>">รับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 4</a></h2>
-                            </div>
-                            <div class="entry-meta">
-                                <ul>
-                                    <li><i class="icon-calendar3"></i> 31 ม.ค. 66</li>
-                                    <li><a href="#"><i class="icon-user"></i> สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาราชภัฏเชียงราย</a></li>
-                                </ul>
-                            </div>
-                            <div class="entry-content">
-                                <p>📣📣เปิดรับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 4 รับผู้เรียนจำนวน 60 คน เท่านั้น!!! สามารถสมัครได้ที่ <a href="https://creditbank.crru.ac.th/">https://creditbank.crru.ac.th/</a>  </p>
-                                <a href="<?php echo site_url('news/detail/N0003');?>" class="btn btn-warning text-dark">รายละเอียด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="entry col-12">
-                    <div class="grid-inner row g-0">
-                        <div class="col-md-4">
-                            <div class="entry-image">
-                                <a href="<?php echo base_url('assets/images/news/N0001.jpg'); ?>" data-lightbox="image"><img src="<?php echo base_url('assets/images/news/N0001.jpg'); ?>" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-md-8 ps-md-4">
-                            <div class="entry-title title-sm">
-                                <h2><a href="<?php echo site_url('news/detail/N0001');?>">รับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 3</a></h2>
-                            </div>
-                            <div class="entry-meta">
-                                <ul>
-                                    <li><i class="icon-calendar3"></i> 4 ก.พ. 65</li>
-                                    <li><a href="#"><i class="icon-user"></i> สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาราชภัฏเชียงราย</a></li>
-                                </ul>
-                            </div>
-                            <div class="entry-content">
-                                <p>📣📣เปิดรับสมัครผู้เรียนในหลักสูตรการศึกษาต่อเนื่อง “สาธารณสุขศาสตร์เพื่อการพัฒนาสุขภาพชุมชน” รุ่นที่ 3 รับผู้เรียนจำนวน 30 คน เท่านั้น!!! สามารถสมัครได้ที่ <a href="https://creditbank.crru.ac.th/">https://creditbank.crru.ac.th/</a>  </p>
-                                <a href="<?php echo site_url('news/detail/N0001');?>" class="btn btn-warning text-dark">รายละเอียด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="entry col-12">
-                    <div class="grid-inner row g-0">
-                        <div class="col-md-4">
-                            <div class="entry-image">
-                                <a href="<?php echo base_url('assets/images/news/N0002.jpg'); ?>" data-lightbox="image"><img src="<?php echo base_url('assets/images/news/N0002.jpg'); ?>" alt=""></a>
-                            </div>
-                        </div>
-                        <div class="col-md-8 ps-md-4">
-                            <div class="entry-title title-sm">
-                                <h2><a href="<?php echo site_url('news/detail/N0002');?>">รับสมัครผู้เข้าร่วมอบรม หลักสูตร“สร้างสมาธิพิชิตอารมณ์ด้วยจิตวิทยาการสื่อสาร”</a></h2>
-                            </div>
-                            <div class="entry-meta">
-                                <ul>
-                                    <li><i class="icon-calendar3"></i> 3 ก.พ. 65</li>
-                                    <li><a href="#"><i class="icon-user"></i> สถาบันการเรียนรู้ตลอดชีวิต มหาวิทยาราชภัฏเชียงราย</a></li>
-                                </ul>
-                            </div>
-                            <div class="entry-content">
-                                <p>ด่วน!!!รับจำนวนจำกัด...ฟรี (เฉพาะรอบนี้เท่านั้น)
-📣📣เปิดรับสมัครผู้เข้าร่วมอบรมหลักสูตรทักษะการเรียนรู้ตลอดชีวิต 
-หลักสูตร“สร้างสมาธิพิชิตอารมณ์ด้วยจิตวิทยาการสื่อสาร” </p>
-                                <a href="<?php echo site_url('news/detail/N0002');?>" class="btn btn-warning text-dark">รายละเอียด</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+<?php echo $this->load->view('website/theme/breadcrumb'); ?>
 
-                <!--<div class="text-center">
-                    <ul class="pagination pagination-circle pagination-lg justify-content-center">
-                        <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"> <span aria-hidden="true">«</span></a></li>
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item"><a class="page-link" href="#">4</a></li>
-                        <li class="page-item"><a class="page-link" href="#">5</a></li>
-                        <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-                    </ul>
-                </div>-->
+<section id="content">
+    <div class="content-wrap bg-light pt-5 pb-3">
+        <div class="container font-noto">
+            <div class="row g-4 mb-5">
+                <?php for($i=0;$i<10;$i++):?>
+                <article class="entry event col-6 mb-0 font-noto">
+                    <div class="grid-inner bg-white row g-0 p-3 border-0 rounded-5 shadow-sm h-shadow all-ts h-translate-y-sm">
+                        <div class="col-md-5 mb-md-0">
+                            <a href="#" class="entry-image mb-0 h-100">
+                                <img src="https://plus.unsplash.com/premium_photo-1682284353484-4e16001c58eb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Inventore voluptates velit totam ipsa tenetur" class="rounded-2 h-100 object-cover">
+                            </a>
+                        </div>
+                        <div class="col-md-7 p-4">
+                            <div class="entry-meta no-separator mb-1 mt-0">
+                                <ul>
+                                    <li><span class="badge rounded-pill text-bg-warning">Modular</span></li>
+                                    <li><i class="fa-regular fa-calendar"></i> 2024/05/13</li>
+                                    <li><i class="fa-regular fa-eye"></i> 1,259</li>
+                                </ul>
+                            </div>
+
+                            <div class="entry-title nott">
+                                <h3 class="lh-1"><a href="#" class="font-noto fs-16">เปิดรับสมัครผู้เรียนในหลักสูตรคลังหน่วยกิต “การศึกษาพิเศษ” ชุดวิชาที่ 1</a></h3>
+                            </div>
+                            <div class="entry-content my-3">
+                                <p class="mb-0 font-noto fs-12">📣📣เปิดรับสมัครผู้เรียน “การศึกษาพิเศษ” ชุดวิชาที่ 1 🎯รับจำนวน 30 คน ตั้งแต่วันที่ 15 ม.ค. – 29 ก.พ. 67 (หรือจนกว่าจำนวนจะเต็ม) สามารถสมัครได้ที่ https://creditbank.crru.ac.th/</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <?php endfor;?>
+                <div class="text-center mt-5">
+                    <button type="button" class="btn btn-outline-secondary btn-sm px-5 py-2">LOAD MORE</button>
+                </div>
             </div>
-            <div class="clear"></div>
         </div>
     </div>
-</section><!-- #content end -->
+</section>

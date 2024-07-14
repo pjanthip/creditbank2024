@@ -1,8 +1,8 @@
 <?php echo $this->load->view('website/theme/breadcrumb'); ?>
 
 <section id="content">
-    <div class="content-wrap bg-light">
-        <div class="container">
+    <div class="content-wrap bg-light pt-5">
+        <div class="container bg-white py-5 px-5 rounded shadow-sm">
 
         <div class="row col-mb-50">
 						<div class="col-sm-6 col-lg-4">

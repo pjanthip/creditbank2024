@@ -1,6 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
-class About extends CI_Controller
+class Faqs extends CI_Controller
 {
     public function __construct()
 	{
@@ -15,10 +15,10 @@ class About extends CI_Controller
         //$reponse = $this->get_filter();
 
         $reponse['page']='SERVICE';
-        $reponse['sub_page']='ABOUTUS';
-        $reponse['title'] = $this->lang->line('nav_services_about');
+        $reponse['sub_page']='FAQ';
+        $reponse['title'] = $this->lang->line('nav_services_faq');
         $reponse['breadcrumb'] = [
-            $this->lang->line('nav_services_about') => ["url" => site_url('about'), "active" => true]
+            $this->lang->line('nav_services_faq') => ["url" => site_url('faqs'), "active" => true]
         ];
 
         $sql = "SELECT * FROM tb_faculty WHERE showStatus = 1";
@@ -26,7 +26,7 @@ class About extends CI_Controller
         
         $this->load->view('website/theme/header',$reponse);
         $this->load->view('website/theme/navbar', $reponse);
-        $this->load->view('website/about/main_view',$reponse);
+        $this->load->view('website/faqs/main_view',$reponse);
         $this->load->view('website/theme/footer.php',$reponse);
     }
 

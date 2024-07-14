@@ -5,7 +5,7 @@
                 <h2 class="font-noto"><i class="fa-regular fa-newspaper"></i> <?php echo $this->lang->line('nav_services_news'); ?></h2>
             </div>
             <div class="ms-auto">
-                <a href="#" class="font-noto">ดูทั้งหมด</a>
+                <a href="<?php echo site_url('news');?>" class="font-noto">ดูทั้งหมด</a>
             </div>
         </div>
 

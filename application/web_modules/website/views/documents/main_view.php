@@ -1,7 +1,7 @@
 <?php echo $this->load->view('website/theme/breadcrumb'); ?>
 
 <section id="content">
-    <div class="content-wrap bg-light">
+    <div class="content-wrap bg-light pt-5">
         <div class="container">
 
             <div class="row">

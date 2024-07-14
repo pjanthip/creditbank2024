@@ -71,12 +71,9 @@ $route['sis'] = 'sis/home';
 
 $route['default_controller'] = 'website/home';
 $route['contact'] = 'website/contact';
-$route['about'] = 'website/about';
 $route['check_register'] = 'website/register/check_register';
 $route['check_register/(:any)'] = '3/$1';
 $route['curriculum'] = 'website/curriculum';
-$route['news'] = 'website/news';
-$route['news/detail/(:any)'] = 'website/news/detail/$1';
 $route['services'] = 'website/services';
 $route['services/test'] = 'website/services/test';
 $route['about'] = 'website/about';
@@ -132,6 +129,13 @@ $route['course/detail/(:any)'] = 'website/course/detail/$1';
 $route['sitemap'] = 'website/sitemap';
 $route['docs'] = 'website/documents';
 $route['docs/detail/(:any)'] = 'website/documents/detail/$1';
+$route['docs/detail/(:any)/(:any)/(:any)'] = 'website/documents/detail/$1/$2/$3';
+$route['faqs'] = 'website/faqs';
+$route['announce'] = 'website/announce';
+$route['about'] = 'website/about';
+$route['news'] = 'website/news';
+$route['news/detail/(:any)'] = 'website/news/detail/$1';
+$route['news/detail/(:any)/(:any)/(:any)'] = 'website/news/detail/$1/$2/$3';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

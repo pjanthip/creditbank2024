@@ -36,7 +36,7 @@ $lang['ads_detail'] = 'Promote and Foster Lifelong Learning';
 
 $lang['nav_services_about'] = 'About us';
 $lang['nav_services_news'] = 'News';
-$lang['nav_services_faq'] = 'Faqs';
+$lang['nav_services_faq'] = 'FAQs';
 $lang['nav_services_manual'] = 'User manual';
 $lang['nav_services_announce'] = 'Announcements & Roles';
 $lang['nav_services_download'] = 'Downloads';

@@ -58,19 +58,19 @@
 							<ul class="sub-menu-container d-none" style="">
 								<?php $current = ($page == "SERVICE" && $sub_page == "ABOUTUS")? "current":"";?>
 								<li class="<?php echo $current;?> menu-item">
-									<a class="menu-link" href="#">
+									<a class="menu-link" href="<?php echo site_url('about');?>">
 										<div class="font-noto fs-16"><i class="fa-solid fa-circle-info"></i> <?php echo $this->lang->line('nav_services_about'); ?></div>
 									</a>
 								</li>
 								<?php $current = (($page == "SERVICE" && $sub_page == "ANNOUNCE") || ($page == "SERVICE" && $sub_page == "ANNOUNCE_DETAIL"))? "current":"";?>
 								<li class="<?php echo $current;?> menu-item">
-									<a class="menu-link" href="#">
+									<a class="menu-link" href="<?php echo site_url('announce');?>">
 										<div class="font-noto fs-16"><i class="fa-solid fa-bullhorn"></i> <?php echo $this->lang->line('nav_services_announce'); ?></div>
 									</a>
 								</li>
 								<?php $current = (($page == "SERVICE" && $sub_page == "NEWS") || ($page == "SERVICE" && $sub_page == "NEWS_DETAIL"))? "current":"";?>
 								<li class="<?php echo $current;?> menu-item">
-									<a class="menu-link" href="#">
+									<a class="menu-link" href="<?php echo site_url('news');?>">
 										<div class="font-noto fs-16"><i class="fa-solid fa-newspaper"></i> <?php echo $this->lang->line('nav_services_news'); ?></div>
 									</a>
 								</li>
@@ -82,7 +82,7 @@
 								</li>
 								<?php $current = (($page == "SERVICE" && $sub_page == "FAQ") || ($page == "SERVICE" && $sub_page == "FAQ_DETAIL"))? "current":"";?>
 								<li class="<?php echo $current;?> menu-item">
-									<a class="menu-link" href="#">
+									<a class="menu-link" href="<?php echo site_url('faqs');?>">
 										<div class="font-noto fs-16"><i class="fa-solid fa-circle-question"></i> <?php echo $this->lang->line('nav_services_faq'); ?></div>
 									</a>
 								</li>
